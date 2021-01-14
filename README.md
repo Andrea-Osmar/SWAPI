@@ -1,19 +1,13 @@
-# Technigo React Starter App
+You will be creating a basic web page using HTML/CSS/Javascript that displays Star Wars characters and provides information about them.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+You can use any libraries/frameworks you want to, it's totally up to you.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+As far as styling goes spend some time making it look however you want it to but focus on making the information easy to parse and the application easy to use.
 
-## Usage
+There are three features we want you to implement, I suggest developing them one at a time in the following order:
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+List all the Star Wars characters by first and last name. Use swapi (Star Wars API) for this. The following GET request will retrieve a list of characters and their related information https://swapi.dev.api/people. It uses pagination meaning you will have to either keep requesting based on the next url that is sent as part of the response or you can implement pagination in the application as well. You can read all of the documentation for the API here.
 
-Alternatively, if you don't want a new git repo on your account;
+Display additional information about the characters when their names are clicked. The user should also be able to hide this information again. You can pick a couple of properties to show based on what you get from the API.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Implement a search feature allowing the user to filter the characters based on their first name or last name.

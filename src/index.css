@@ -1,3 +1,6 @@
+  @import url(https://allfont.net/allfont.css?fonts=star-jedi);
+  @import url(https://allfont.net/allfont.css?fonts=star-jedi-hollow);
+   @import url(https://allfont.net/allfont.css?fonts=star-jedi-logo-monoline);
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +8,92 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* VIDEO */
+
+.myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* HOME */
+
+.home-container {
+  margin-top: 150px
+}
+
+h1 {
+  text-align: center;
+  color: yellow;
+  font-size: 60px;
+  font-family: 'Star Jedi Hollow', arial;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* BUTTONS */
+.link-button {
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  font-family: 'Star Jedi Logo MonoLine', arial;
+  /*font-family: 'Star Jedi', arial;*/
+}
+
+/* CHARACTERS, STARSHIPS, PLANETS */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+ .container a {
+  color: #ffffff;
+  position: relative;
+  width: 25%;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.cards {
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-info {
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  border-radius: 2px;
+  border: solid 2px grey;
+  box-shadow: 3px 9px 19px grey;
+  margin: 35px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+}  
+
+/* DETAILS */
+
+/* MEDIAQUERIES */
