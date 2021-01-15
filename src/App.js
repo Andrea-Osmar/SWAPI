@@ -14,10 +14,10 @@ export const App = () => {
         <Route path='/' exact>
           <Home />
         </Route>
-        <Route path='/characters'>
+        <Route path='/characters' exact>
           <Characters />
         </Route>
-        <Route path='/characters/name' >
+        <Route path='/characters/:id' exact >
           <CharacterDetails />
         </Route>
         <Route path='/planets'>
@@ -30,3 +30,17 @@ export const App = () => {
     </BrowserRouter>
   )
 }
+
+// TODO:
+// * List all Characters -  
+// * Fix pagination api to display all
+// * Display info about characters when clicked - DONE
+// * Back button from pages - DONE
+// * Search feature - filter on first and last name
+// * Fix Fonts
+// * Styling
+// FIXME: om tid finns
+// * Add images / change api
+// * Add Loader
+// * Add pagenotfound
+// * Add Navbar

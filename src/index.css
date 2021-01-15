@@ -1,7 +1,8 @@
   @import url(https://allfont.net/allfont.css?fonts=star-jedi);
   @import url(https://allfont.net/allfont.css?fonts=star-jedi-hollow);
    @import url(https://allfont.net/allfont.css?fonts=star-jedi-logo-monoline);
-body {
+
+   body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -46,7 +47,9 @@ h1 {
 }
 
 /* BUTTONS */
+
 .link-button {
+  cursor: pointer;
   border-radius: 5px;
   font-size: 20px;
   text-align: center;
@@ -96,4 +99,8 @@ h1 {
 
 /* DETAILS */
 
+.details {
+  font-size: 14px; 
+  color: yellow;
+}
 /* MEDIAQUERIES */
