@@ -5,7 +5,12 @@ import { Home } from './pages/Home'
 import { Characters } from './pages/Characters'
 import { CharacterDetails } from './pages/CharacterDetails'
 import { Planets } from './pages/Planets'
-import { Starships } from './pages/Starships'
+import { PlanetsDetails } from 'pages/PlanetsDetails'
+import { Species } from './pages/Species'
+import { SpeciesDetails } from './pages/SpeciesDetails'
+import { Films } from './pages/Films'
+import { FilmsDetails } from './pages/FilmsDetails'
+
 
 export const App = () => {
   return (
@@ -14,18 +19,35 @@ export const App = () => {
         <Route path='/' exact>
           <Home />
         </Route>
+
         <Route path='/characters' exact>
           <Characters />
         </Route>
-        <Route path='/characters/:id' exact >
+        <Route path='/characters/:id' exact>
           <CharacterDetails />
         </Route>
-        <Route path='/planets'>
+
+        <Route path='/planets' exact>
           <Planets />
         </Route>
-        <Route path='/starships'>
-          <Starships />
+        <Route path='/planets/:id' exact>
+          <PlanetsDetails />
         </Route>
+
+        <Route path='/species' exact>
+          <Species />
+        </Route>
+        <Route path='/species/:id' exact>
+        <SpeciesDetails />
+        </Route>
+
+      <Route path='/films' exact>
+      <Films />
+      </Route>
+      <Route path='/films/:id' exact>
+        <FilmsDetails />
+      </Route>
+        
       </Switch>
     </BrowserRouter>
   )

@@ -1,15 +1,13 @@
-  @import url(https://allfont.net/allfont.css?fonts=star-jedi);
-  @import url(https://allfont.net/allfont.css?fonts=star-jedi-hollow);
-   @import url(https://allfont.net/allfont.css?fonts=star-jedi-logo-monoline);
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Bowlby+One+SC&display=swap');
 
-   body {
+  body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
+  background-color: #000000;
 }
 
 code {
@@ -31,14 +29,21 @@ code {
 /* HOME */
 
 .home-container {
-  margin-top: 150px
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   text-align: center;
   color: yellow;
   font-size: 60px;
-  font-family: 'Star Jedi Hollow', arial;
+  font-family: 'Baloo 2', cursive;
+}
+
+h2 {
+  font-family: 'Baloo 2', cursive;
 }
 
 .wrapper {
@@ -49,17 +54,49 @@ h1 {
 /* BUTTONS */
 
 .link-button {
+  font-family: 'Baloo 2', cursive;
+  width: 175px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 20px;
   text-align: center;
-  padding: 15px;
-  margin: 10px;
-  background-color: yellow;
-  color: black;
+  padding: 20px;
+  margin: 20px;
+  background-color: transparent;
+  color: #ffe81f;
+  border: 2px solid #ffe81f;
+  box-shadow: 5px 8px 4px #ffe91f87;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.link-button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.back-button {
+  left: 7px;
+  cursor: pointer;
+  font-size: 48px;
+  padding: 4px;
+  background-color: transparent;
+  color: #ffe81f;
   border: none;
-  font-family: 'Star Jedi Logo MonoLine', arial;
-  /*font-family: 'Star Jedi', arial;*/
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  position: fixed;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.back-button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* CHARACTERS, STARSHIPS, PLANETS */
@@ -70,7 +107,8 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
- .container a {
+
+.container a {
   color: #ffffff;
   position: relative;
   width: 25%;
@@ -85,22 +123,65 @@ h1 {
   justify-content: center;
 }
 
-.cards-info {
+.cards-info, 
+.cards-info-details,
+.cards-info-details-films {
   width: 200px;
-  height: 300px;
+  height: auto;
   text-align: center;
   border-radius: 2px;
-  border: solid 2px grey;
-  box-shadow: 3px 9px 19px grey;
+  border: solid 2px #54545461;
+  box-shadow: 3px 9px 19px #6b6a6a;
   margin: 35px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.59);
 }  
+
+.cards-info-details { 
+  width: 500px;
+}
 
 /* DETAILS */
 
-.details {
-  font-size: 14px; 
-  color: yellow;
+.details { 
+  font-family: 'Baloo 2', cursive;
+  font-size: 30px; 
+  color: #ffe81f;
 }
+
+.details-year {
+  font-size: 15px;
+}
+
+
+/* LOADING ANIMATION*/
+
+@keyframes load {
+  0%{
+    opacity: 0.08;
+    font-size: 60px; 
+    filter: blur(5px);
+    letter-spacing: 3px;
+  }
+
+  100%{
+      opacity: 1;
+      font-size: 100px;
+      filter: blur(0); 
+    }
+}
+
+/* LOADER */
+
+.loader {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  margin: auto;
+  margin-top: 30px;
+	animation: load 1.2s infinite 0s ease-in-out;
+	animation-direction: alternate;
+	text-shadow: 0 0 1px #ffe81f;
+}
+
 /* MEDIAQUERIES */

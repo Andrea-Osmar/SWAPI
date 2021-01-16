@@ -19,18 +19,17 @@ export const CharacterDetails = () => {
 
   return (
     <div className="container">
-
       <Link to="/characters">
         <button className="back-button" type="button">
-          <span> ⬅</span> Back
+          <span> ⬅</span>
         </button>
       </Link>
-
-      <div className="cards-info">
-        <p className="details">Name: {characterDetail.name}</p>
+      <h1>{characterDetail.name}</h1>
+      <div className="cards-info-details">
         <p className="details">Gender: {characterDetail.gender}</p>
-        <p className="details">Birthyear: {characterDetail.birth_year}</p>
-        <p className="details">Height: {characterDetail.height}</p>
+        <p className="details">Birthyear: {characterDetail.birth_year}<br></br>  
+        <span className='details-year'>(Before the Battle of Yavin)</span></p>
+        <p className="details">Height: {characterDetail.height} cm</p>
       </div>
     </div>
   )

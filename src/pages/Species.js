@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { SpeciesThumb } from '../components/SpeciesThumb'
 
-import { PlanetsThumb } from '../components/PlanetsThumb'
-
-export const Planets = () => {
-  const [planets, setPlanets] = useState([])
-  const planetURL = "https://swapi.dev/api/planets/"
+export const Species = () => {
+  const [species, setSpecies] = useState([])
+  const planetURL = "https://swapi.dev/api/species/"
   
   useEffect(() => {
     fetch(planetURL)
       .then((res) => res.json())
       .then((json) => {
-        setPlanets(json.results)
+        setSpecies(json.results)
       })
   }, [])
 
@@ -23,13 +22,14 @@ export const Planets = () => {
             <span> ⬅</span>
           </button>
         </Link>
-        <h1>Star Wars Planets</h1>
+
+        <h1>Star Wars Species</h1>
         <div className="cards">
-          {planets.map((planets, index) => (
-            <PlanetsThumb
-            name={planets.name}
+          {species.map((species, index) => (
+            <SpeciesThumb
+            name={species.name}
             id={index + 1}
-            key={planets.name}
+            key={species.name}
             />
             ))}
         </div>
