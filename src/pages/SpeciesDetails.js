@@ -24,7 +24,7 @@ export const SpeciesDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1>{speciesDetail.name}</h1>
+      <h1 className='title'>{speciesDetail.name}</h1>
       <div className="cards-info-details">
         <p className="details">Classification: {speciesDetail.classification}</p>
         <p className="details">Language: {speciesDetail.language}</p>

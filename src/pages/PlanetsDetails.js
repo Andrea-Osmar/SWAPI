@@ -24,7 +24,7 @@ export const PlanetsDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1>{planetsDetail.name}</h1>
+      <h1 className='title'>{planetsDetail.name}</h1>
       <div className="cards-info-details">
         <p className="details">Climate: {planetsDetail.climate}</p>
         <p className="details">Terrain: {planetsDetail.terrain}</p>

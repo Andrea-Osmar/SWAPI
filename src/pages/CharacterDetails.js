@@ -24,7 +24,7 @@ export const CharacterDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1>{characterDetail.name}</h1>
+      <h1 className='title'>{characterDetail.name}</h1>
       <div className="cards-info-details">
         <p className="details">Gender: {characterDetail.gender}</p>
         <p className="details">Birthyear: {characterDetail.birth_year}<br></br>  

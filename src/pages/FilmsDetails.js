@@ -24,7 +24,7 @@ export const FilmsDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1>{filmsDetail.title}</h1>
+      <h1 className='title'>{filmsDetail.title}</h1>
       <div className="cards-info-details">
         <p className="details">Release: {filmsDetail.release_date}</p>
         <p className="details">Director: {filmsDetail.director}</p>
