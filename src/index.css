@@ -65,6 +65,7 @@ h2 {
 .link-button:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .back-button {
@@ -156,7 +157,36 @@ h2 {
 
 
 /* SEARCH FIELD*/
+a .item {
+  background-color: tomato;
+}
 
+.item {
+  background: purple;
+}
+
+.ui.menu {
+background-color: tomato;
+}
+
+.ui.pagination.menu {
+  background: yellow;
+  color: #000000;
+  display: block;
+}
+
+.ui.pagination.menu .item {
+  color: #000000;
+  background:  #f0e47b;
+}
+
+.ui.pagination.menu .active.item {
+  background-color: blue;
+} 
+
+.ui.menu .item {
+background-color: yellowgreen;
+}
 
 
 

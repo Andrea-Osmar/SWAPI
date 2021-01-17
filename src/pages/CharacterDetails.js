@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
-export const CharacterDetails = () => {
+export const CharacterDetails = (props) => {
   const [characterDetail, setcharacterDetail] = useState({})
+  //const {data} = useState()
   const { id } = useParams()
+  
+  console.log(props)
 
-  console.log(characterDetail)
-
-  useEffect(() => {
+    useEffect(() => {
     fetch(`https://swapi.dev/api/people/${id}`)
       .then((res) => res.json())
       .then((data) => {
@@ -16,6 +16,12 @@ export const CharacterDetails = () => {
         console.log("detail", data)
       })
   }, [id])
+
+  // useEffect(() => {
+  //   setcharacterDetail(data)
+  //})
+
+
 
   return (
     <div className="container">
@@ -34,3 +40,15 @@ export const CharacterDetails = () => {
     </div>
   )
 }
+
+/*
+
+  useEffect(() => {
+    fetch(`https://swapi.dev/api/people/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setcharacterDetail(data)
+        console.log("detail", data)
+      })
+  }, [id])
+*/

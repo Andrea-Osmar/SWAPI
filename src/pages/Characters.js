@@ -3,24 +3,16 @@ import { Link } from "react-router-dom"
 
 import { CharacterThumb } from "../components/CharacterThumb"
 import Loader from "../components/Loader"
-import { Pagination } from 'semantic-ui-react'
 import { Search } from '../components/Search'
 
 export const Characters = () => {
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
-  const [activePage, setActivePage] = useState(1)
   const [apiUrl, setApiUrl] = useState('https://swapi.dev/api/people/?page=1')
 
   useEffect(() => {
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((json) => {
-        setCharacters(json.results)
-        setLoading(false)
-        console.log(json)
-      })
-  }, [apiUrl]);
+    loadData(apiUrl)
+  }, [apiUrl])
 
   const search = searchValue => {
     setLoading(true);
@@ -28,13 +20,27 @@ export const Characters = () => {
       .then(res => res.json())
       .then(json => {
         setCharacters(json.results);
-          setLoading(false);
+        setLoading(false);
         
       });
-  };
-  const onChange = (e, pageInfo) => {
-    setActivePage(pageInfo.activePage)
-    setApiUrl('https://swapi.dev/api/people/?page=' + activePage.toString())
+  }; 
+
+  const loadData = apiUrl => {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((json) => {
+        setCharacters(characters.concat(json.results))
+        setLoading(false)
+        // Get next url
+        const nextUrl = json.next
+        if (nextUrl) {
+          setApiUrl(nextUrl)
+        }
+        
+        //console.log(json)
+      })
+      //console.log(characters)
+      
   }
 
   return (
@@ -42,10 +48,7 @@ export const Characters = () => {
     {loading && <Loader />}
       {!loading && (
       <div className="container">
-    
-
-    <Search search={search}/>
-
+        <Search search={search}/>
         <Link to="/">
           <button className="back-button" type="button">
             <span> ⬅</span>
@@ -58,22 +61,14 @@ export const Characters = () => {
           {characters.map((characters, index) => (
             <CharacterThumb
               name={characters.name}
-              id={index + 1}
+              id={index +1}
+              data={characters}
               key={characters.name}
             />
           ))}
         </div>
+        
         </div>
-      <Pagination 
-        activePage={activePage}
-        boundaryRange={5}
-        firstItem={false}
-        lastItem={false}
-        onPageChange={onChange}
-        totalPages={9}
-        ellipsisItem={null}
-        /> 
-
         </div>
       </div>
       )}

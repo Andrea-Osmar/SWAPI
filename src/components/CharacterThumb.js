@@ -5,7 +5,7 @@ export const CharacterThumb = ({ name, id }) => {
   return (
     <div className="cards-info" key={name}>
       <h2>
-        <Link to={`/characters/${id}`}>{name}</Link>
+        <Link to={`/characters/${id}`}>{name} </Link>
       </h2>
     </div>
   )

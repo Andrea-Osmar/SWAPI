@@ -11,7 +11,6 @@ import { SpeciesDetails } from './pages/SpeciesDetails'
 import { Films } from './pages/Films'
 import { FilmsDetails } from './pages/FilmsDetails'
 
-
 export const App = () => {
   return (
   <BrowserRouter>
@@ -23,14 +22,14 @@ export const App = () => {
         <Route path='/characters' exact>
           <Characters />
         </Route>
-        <Route path='/characters/:id' exact>
+        <Route path='/characters/:id'  exact>
           <CharacterDetails />
         </Route>
 
         <Route path='/planets' exact>
           <Planets />
         </Route>
-        <Route path='/planets/:id' exact>
+        <Route path='/planets/:id'>
           <PlanetsDetails />
         </Route>
 
@@ -55,7 +54,7 @@ export const App = () => {
 
 // TODO:
 // * List all Characters -  DONE
-// * Fix pagination api to display all
+// * Fix pagination api to display all - DONE
 // * Display info about characters when clicked - DONE
 // * Back button from pages - DONE
 // * Search feature - filter on first and last name - DONE

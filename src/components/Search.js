@@ -22,6 +22,7 @@ export const Search = (props) => {
           value={searchValue}
           onChange={handleSearchInputChanges}
           type="text"
+          placeholder='May the search be with you'
         />
         <input onClick={callSearchFunction} type="submit" value="SEARCH" />
       </form>
