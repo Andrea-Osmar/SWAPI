@@ -54,15 +54,14 @@ export const App = () => {
 }
 
 // TODO:
-// * List all Characters -  
+// * List all Characters -  DONE
 // * Fix pagination api to display all
 // * Display info about characters when clicked - DONE
 // * Back button from pages - DONE
-// * Search feature - filter on first and last name
-// * Fix Fonts
+// * Search feature - filter on first and last name - DONE
+// * Fix Fonts 
 // * Styling
 // FIXME: om tid finns
 // * Add images / change api
-// * Add Loader
+// * Add Loader - DONE
 // * Add pagenotfound
-// * Add Navbar
