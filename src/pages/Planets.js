@@ -12,6 +12,7 @@ export const Planets = () => {
 
   useEffect(() => {
     loadData(apiUrl)
+    // eslint-disable-next-line
   }, [apiUrl])
 
   const search = (searchValue) => {

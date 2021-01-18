@@ -12,6 +12,7 @@ export const Species = () => {
 
   useEffect(() => {
     loadData(apiUrl)
+    // eslint-disable-next-line
   }, [apiUrl])
 
   const search = (searchValue) => {

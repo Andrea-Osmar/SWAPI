@@ -12,6 +12,7 @@ export const Characters = () => {
 
   useEffect(() => {
     loadData(apiUrl)
+    // eslint-disable-next-line
   }, [apiUrl])
 
   const search = (searchValue) => {
