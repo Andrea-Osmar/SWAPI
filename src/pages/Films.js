@@ -7,7 +7,7 @@ import Loader from "../components/Loader"
 export const Films = () => {
   const [films, setFilms] = useState([])
   const [loading, setLoading] = useState(true)
-  const planetURL = "http://swapi.dev/api/films/"
+  const planetURL = "https://swapi.dev/api/films/"
 
   useEffect(() => {
     fetch(planetURL)

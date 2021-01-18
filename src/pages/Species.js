@@ -8,7 +8,7 @@ import { Search } from "../components/Search"
 export const Species = () => {
   const [species, setSpecies] = useState([])
   const [loading, setLoading] = useState(true)
-  const [apiUrl, setApiUrl] = useState("http://swapi.dev/api/species/?page=1")
+  const [apiUrl, setApiUrl] = useState("https://swapi.dev/api/species/?page=1")
 
   useEffect(() => {
     loadData(apiUrl)
@@ -17,7 +17,7 @@ export const Species = () => {
 
   const search = (searchValue) => {
     setLoading(true)
-    fetch("http://swapi.dev/api/species/?search=" + searchValue)
+    fetch("https://swapi.dev/api/species/?search=" + searchValue)
       .then((res) => res.json())
       .then((json) => {
         setSpecies(json.results)

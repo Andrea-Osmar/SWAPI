@@ -8,7 +8,7 @@ import { Search } from "../components/Search"
 export const Characters = () => {
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
-  const [apiUrl, setApiUrl] = useState("http://swapi.dev/api/people/?page=1")
+  const [apiUrl, setApiUrl] = useState("https://swapi.dev/api/people/?page=1")
 
   useEffect(() => {
     loadData(apiUrl)
@@ -17,7 +17,7 @@ export const Characters = () => {
 
   const search = (searchValue) => {
     setLoading(true)
-    fetch("http://swapi.dev/api/people/?search=" + searchValue)
+    fetch("https://swapi.dev/api/people/?search=" + searchValue)
       .then((res) => res.json())
       .then((json) => {
         setCharacters(json.results)
