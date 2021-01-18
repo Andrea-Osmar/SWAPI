@@ -25,7 +25,7 @@ export const Films = () => {
         <div className="container">
           <Link to="/">
             <button className="back-button" type="button">
-              <i class="fas fa-long-arrow-alt-left"></i>
+              <i className="fas fa-long-arrow-alt-left"></i>
             </button>
           </Link>
           <h1 className="title">Star Wars Films</h1>
