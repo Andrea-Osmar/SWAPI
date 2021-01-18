@@ -289,6 +289,14 @@ input::placeholder {
 .search {
   flex-direction: column;
 }
+.search-field {
+  width: 250px;
+}
+
+.search-button, 
+.search-reset {
+  width: 85px;
+}
 
 .button-wrapper {
   flex-direction: row;
