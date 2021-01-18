@@ -6,14 +6,11 @@ export const PlanetsDetails = () => {
   const [planetsDetail, setPlanetsDetail] = useState({})
   const { id } = useParams()
 
-  console.log(planetsDetail)
-
   useEffect(() => {
     fetch(`https://swapi.dev/api/planets/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setPlanetsDetail(data)
-        console.log("detail", data)
       })
   }, [id])
 
@@ -24,7 +21,7 @@ export const PlanetsDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1 className='title'>{planetsDetail.name}</h1>
+      <h1 className="title">{planetsDetail.name}</h1>
       <div className="cards-info-details">
         <p className="details">Climate: {planetsDetail.climate}</p>
         <p className="details">Terrain: {planetsDetail.terrain}</p>

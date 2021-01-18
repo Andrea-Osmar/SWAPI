@@ -6,14 +6,11 @@ export const FilmsDetails = () => {
   const [filmsDetail, setFilmsDetails] = useState({})
   const { id } = useParams()
 
-  console.log(filmsDetail)
-
   useEffect(() => {
     fetch(`https://swapi.dev/api/films/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFilmsDetails(data)
-        console.log("detail", data)
       })
   }, [id])
 
@@ -24,8 +21,8 @@ export const FilmsDetails = () => {
           <span> ⬅</span>
         </button>
       </Link>
-      <h1 className='title'>{filmsDetail.title}</h1>
-      <div className="cards-info-details">
+      <h1 className="title">{filmsDetail.title}</h1>
+      <div className="cards-info-details-films">
         <p className="details">Release: {filmsDetail.release_date}</p>
         <p className="details">Director: {filmsDetail.director}</p>
         <p className="details">Opening: {filmsDetail.opening_crawl}</p>

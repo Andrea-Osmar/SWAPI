@@ -1,30 +1,46 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export const Search = (props) => {
-  const [searchValue, setSearchValue] = useState("");
-  const handleSearchInputChanges = (e) => {
-    setSearchValue(e.target.value);
+  const [searchValue, setSearchValue] = useState("")
+
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value)
   }
 
   const resetInputField = () => {
     setSearchValue("")
+    props.search(searchValue)
   }
 
   const callSearchFunction = (e) => {
-    e.preventDefault();
-    props.search(searchValue);
-    resetInputField();
+    e.preventDefault()
+    props.search(searchValue)
+    resetInputField()
   }
 
   return (
-      <form className="search">
+    <form className="search">
+      <input
+        className="search-field"
+        value={searchValue}
+        onChange={handleInputChange}
+        type="text"
+        placeholder="May the search be with you"
+      />
+      <div className="button-wrapper">
         <input
-          value={searchValue}
-          onChange={handleSearchInputChanges}
-          type="text"
-          placeholder='May the search be with you'
+          className="search-button"
+          onClick={callSearchFunction}
+          type="submit"
+          value="Search"
         />
-        <input onClick={callSearchFunction} type="submit" value="SEARCH" />
-      </form>
-    );
+        <input
+          className="search-reset"
+          onClick={resetInputField}
+          type="reset"
+          value="Reset"
+        ></input>
+      </div>
+    </form>
+  )
 }
