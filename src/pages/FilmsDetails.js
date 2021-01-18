@@ -7,7 +7,7 @@ export const FilmsDetails = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://swapi.dev/api/films/${id}`)
+    fetch(`https//swapi.dev/api/films/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFilmsDetails(data)
