@@ -45,7 +45,7 @@ export const Planets = () => {
         <div className="container">
           <Link to="/">
             <button className="back-button" type="button">
-              <span> ⬅</span>
+              <i class="fas fa-long-arrow-alt-left"></i>
             </button>
           </Link>
           <h1 className="title">Star Wars Planets</h1>

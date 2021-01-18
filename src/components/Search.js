@@ -40,6 +40,7 @@ export const Search = (props) => {
           type="reset"
           value="Reset"
         ></input>
+        <img className="r2d2" src="../r2d2.png" alt="Star Wars figure" />
       </div>
     </form>
   )

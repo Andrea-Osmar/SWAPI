@@ -18,7 +18,7 @@ export const FilmsDetails = () => {
     <div className="container">
       <Link to="/films">
         <button className="back-button" type="button">
-          <span> ⬅</span>
+          <i class="fas fa-long-arrow-alt-left"></i>
         </button>
       </Link>
       <h1 className="title">{filmsDetail.title}</h1>

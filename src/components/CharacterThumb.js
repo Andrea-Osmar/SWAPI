@@ -3,7 +3,7 @@ import React from "react"
 export const CharacterThumb = ({ name, data }) => {
   return (
     <div className="cards-info" key={name}>
-      <h2>{data.name}</h2>
+      <h2 className='cards-name'>{data.name}</h2>
 
       <div className="cards-info-details">
         <p className="details">Gender: {data.gender}</p>
