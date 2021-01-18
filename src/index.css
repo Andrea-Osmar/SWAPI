@@ -166,7 +166,7 @@ body {
   word-break: break-word;
 }
 
-.cards-info:hover  .cards-info-details{
+.cards-info:hover  .cards-info-details {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
