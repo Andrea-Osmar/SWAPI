@@ -8,6 +8,7 @@ export const PlanetsThumb = ({ name, data }) => {
         <p className="details">Climate: {data.climate}</p>
         <p className="details">Terrain: {data.terrain}</p>
         <p className="details">Gravity: {data.gravity}</p>
+        <p className="details">Population: {data.population}</p>
       </div>
     </div>
   )

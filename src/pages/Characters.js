@@ -16,6 +16,10 @@ export const Characters = () => {
   }, [apiUrl])
 
   const search = (searchValue) => {
+    if (searchValue === "") {
+      setApiUrl("https://swapi.dev/api/people/?page=1")
+      loadData(apiUrl)
+    } else {
     setLoading(true)
     fetch("https://swapi.dev/api/people/?search=" + searchValue)
       .then((res) => res.json())
@@ -23,6 +27,7 @@ export const Characters = () => {
         setCharacters(json.results)
         setLoading(false)
       })
+    }
   }
 
   const loadData = (apiUrl) => {

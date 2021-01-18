@@ -16,6 +16,10 @@ export const Planets = () => {
   }, [apiUrl])
 
   const search = (searchValue) => {
+    if (searchValue === "") {
+      setApiUrl("https://swapi.dev/api/planets/?page=1")
+      loadData(apiUrl)
+    } else {
     setLoading(true)
     fetch("https://swapi.dev/api/planets/?search=" + searchValue)
       .then((res) => res.json())
@@ -23,6 +27,7 @@ export const Planets = () => {
         setPlanets(json.results)
         setLoading(false)
       })
+    }
   }
 
   const loadData = (apiUrl) => {

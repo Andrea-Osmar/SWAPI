@@ -16,6 +16,10 @@ export const Species = () => {
   }, [apiUrl])
 
   const search = (searchValue) => {
+    if (searchValue === "") {
+      setApiUrl("https://swapi.dev/api/species/?page=1")
+      loadData(apiUrl)
+    } else {
     setLoading(true)
     fetch("https://swapi.dev/api/species/?search=" + searchValue)
       .then((res) => res.json())
@@ -23,6 +27,7 @@ export const Species = () => {
         setSpecies(json.results)
         setLoading(false)
       })
+    }
   }
 
   const loadData = (apiUrl) => {
